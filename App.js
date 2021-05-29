@@ -2,7 +2,7 @@ import React from 'react'
 
 import {View, Text, StyleSheet,StatusBar} from 'react-native'
 import {colors} from './src/global/styles'
-import RootNavigator from './src/navigation/RootNavigator'
+import RootNavigator from './src/navigation/rootNavigation'
 
 
 

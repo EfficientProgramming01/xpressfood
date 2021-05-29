@@ -2,7 +2,7 @@ import React,{useState,useRef} from 'react';
 
 import {View, Text, StyleSheet, Dimensions,Image,ScrollView} from 'react-native'
 import {colors, parameters,title} from "../../global/styles"
-import * as Animatable from 'react-native-animatable'
+
 
 import Swiper from 'react-native-swiper'
 

@@ -85,6 +85,7 @@ export default function SignInScreen({navigation}){
                     title ="SIGN IN"
                     buttonStyle = {parameters.styledButton}
                     titleStyle = {parameters.buttonTitle}
+                   
                    />
             </View>  
 
