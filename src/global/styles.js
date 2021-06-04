@@ -9,7 +9,8 @@ export const colors = {
     CardComment : '#86939e',
     cardbackground:"white",
     statusbar:"#ff8c52",
-    heaherText:"white"
+    heaherText:"white",
+    lightgreen: '#66DF48',
 }
 
 
