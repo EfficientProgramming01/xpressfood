@@ -8,6 +8,24 @@ export const filterData = [{name:"Fast food",image: require('../assets/fastfood.
                 ];
 
 
+
+
+export const filterData2 = [{name:"Fast food",image:'https://bukasapics.s3.us-east-2.amazonaws.com/chicken.png' , id:"0"},
+{name:"Burgers",image: 'https://bukasapics.s3.us-east-2.amazonaws.com/macdo.png',id:"1"},
+{name:"Salads",image:"https://bukasapics.s3.us-east-2.amazonaws.com/nandos.png",id:"2"},
+{name:"Hotdog",image: "https://bukasapics.s3.us-east-2.amazonaws.com/pizza.png",id:"3"},
+{name:"Chinese",image:"https://bukasapics.s3.us-east-2.amazonaws.com/pizza6.png",id:"4"},
+{name:"Mexican",image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate1.png",id:"5"},  
+{name:"Sea food",image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate2.png",id:"6"},
+{name:"Chinese Food",image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate3.png",id:"7"},
+{name:"Mexican pie",image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate4.png",id:"8"},  
+{name:"Ocean dish",image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate5.png",id:"9"},
+];
+
+
+
+
+
  export const restaurantsData = [
                   {restaurantName:"Mc Donalds", farAway:"21.2",
                   businessAddress:"22 Bessie street, Cape Town",images:'https://bukasapics.s3.us-east-2.amazonaws.com/chicken.png',
