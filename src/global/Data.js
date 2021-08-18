@@ -67,4 +67,19 @@ export const filterData2 = [{name:"Fast food",image:'https://bukasapics.s3.us-ea
                       ],
                   id:3},
                   ]
-               
+    
+
+
+              export const productData = [{name:"Hand cut chips", price:29.30,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate5.png",
+              details:"Two 100% fresh beef burger patties that are hot,deliciously",id:0},
+                {name:"Big Mac", price:50.80,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate4.png",
+                details:"McFeast features two 100% fresh beef burger patties that are hot",id:1},
+                {name:"Chicken Burger", price:70,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate3.png",details:"",id:2},
+                
+                {name:"Hand cut chips", price:29.30,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate4.png",
+                details:"Two 100% fresh beef burger patties that are hot,deliciously",id:3},
+                {name:"Big Mac", price:70.20,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate1.png",
+                details:"McFeast features two 100% fresh beef burger patties that are hot",id:4},
+                {name:"Chicken Burger", price:70,image:"https://bukasapics.s3.us-east-2.amazonaws.com/chicken.png",details:"",id:5},
+              
+                  ];                 
