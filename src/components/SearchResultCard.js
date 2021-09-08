@@ -27,7 +27,7 @@ const SearchResultCard = ({
 
     return (
         <View>
-
+            <TouchableOpacity onPress ={OnPressRestaurantCard}>
             <View style ={styles.view1}>
                 <View style ={{height:150}}>
                     <ImageBackground 
@@ -71,7 +71,8 @@ const SearchResultCard = ({
 
               
             </View>
-            
+          
+            </TouchableOpacity>
             <View style ={{marginTop:5,paddingBottom:20}}>
 
             <FlatList

@@ -53,7 +53,7 @@ export default function SignInScreen({navigation}){
                 </Animatable.View>
 
                      <TextInput 
-                      style= {{width:"80%"}}
+                      style= {{flex:1}}
                       placeholder ="Password"
                       ref ={textInput2}
                       onFocus ={()=>{

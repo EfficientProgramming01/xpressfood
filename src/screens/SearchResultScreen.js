@@ -29,6 +29,7 @@ const SearchResultScreen = ({navigation,route}) => {
                             farAway ={item.farAway}
                             businessAddress ={item.businessAddress}
                             productData ={item.productData}
+                            OnPressRestaurantCard ={()=>{navigation.navigate("RestaurantHomeScreen",{id:index,restaurant:item.restaurantName})}}
                         />
                                     
                           )}
@@ -52,7 +53,7 @@ export default SearchResultScreen
 const styles = StyleSheet.create({
     container:{
         flex:1,
-      
+      paddingTop:20
     },
 
     listHeader:{color :colors.grey1,
