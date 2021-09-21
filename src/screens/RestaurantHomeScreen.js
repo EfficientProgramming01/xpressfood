@@ -107,11 +107,23 @@ const RestaurantHomeScreen = ({navigation,route}) => {
                      />
                 </View>
 
-            
+                {index === 0 &&
+                    <MenuScreen onPress = {menuPressed}/>
+                }
+
               
            </ScrollView>
 
-    
+        <TouchableOpacity>
+            <View style ={styles.view11}>
+                <View style ={styles.view12}>
+                    <Text style ={styles.text13}>View Cart</Text>
+                    <View style ={styles.view13}>
+                        <Text style ={styles.text13}>0</Text>
+                    </View>
+                </View>
+            </View>
+        </TouchableOpacity>
        
         </View>
     )

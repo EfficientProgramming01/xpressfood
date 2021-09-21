@@ -5,7 +5,31 @@ import MenuCard from '../components/MenuCard';
 
 
 
+export  function Route1(){
+    return(
+        <View style ={{flex:1}}>
+            <View style ={styles.view2}>
+                <FlatList 
+                    style ={{backgroundColor:'white'}}
+                    data = {menuDetailedData}
+                    keyExtractor = {(item,index)=>index.toString()}
+                    renderItem = {({item,index})=>(
+                        <TouchableOpacity>
+                            <MenuCard 
+                                productName ={item.meal}
+                                image ={item.image}
+                                price ={item.price}
+                                productDetails = {item.details}
+                            />
+                        </TouchableOpacity>
+                    )}
 
+                showsVerticalScrollIndicator = {false}
+                />
+            </View>
+        </View>
+    )
+}
 
 export const Route2 = ()=>(<View style = {styles.scene}/>)
 export const Route3 = ()=>(<View style = {styles.scene}/>)

@@ -7,6 +7,7 @@ import HomeScreen from '../screens/HomeScreen';
 import RootClientTabs from './ClientTabs';
 import RestaurantMapScreen from '../screens/RestaurantsMapScreen';
 import DrawerNavigator from './DrawerNavigator';
+import SignUpScreen from '../screens/authScreens/SignUpScreen';
 
 
 
@@ -32,6 +33,15 @@ export function AuthStack(){
                             ...TransitionPresets.RevealFromBottomAndroid
                         }}
                     />  
+
+                    <Auth.Screen 
+                        name ="SignUpScreen"
+                        component = {SignUpScreen}
+                        options ={{
+                            headerShown: false,
+                            ...TransitionPresets.RevealFromBottomAndroid
+                        }}
+                    /> 
 
                 <Auth.Screen 
                         name ="DrawerNavigator"

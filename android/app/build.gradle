@@ -1,4 +1,5 @@
 apply plugin: "com.android.application"
+apply plugin: 'com.google.gms.google-services' // <- Add this line
 
 import com.android.build.OutputFile
 
@@ -136,6 +137,8 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true  //ADD THIS LINE
+        vectorDrawables.useSupportLibrary = true  //ADD THIS LINE
     }
     splits {
         abi {
@@ -184,6 +187,21 @@ android {
 }
 
 dependencies {
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:27.1.0')
+
+    // Declare the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-auth'
+
+    implementation 'com.facebook.android:facebook-android-sdk:[5,6)' // added
+
+
+  // Add this line
+    implementation "androidx.browser:browser:1.2.0"
+
+
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
