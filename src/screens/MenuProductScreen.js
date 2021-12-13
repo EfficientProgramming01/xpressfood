@@ -28,7 +28,7 @@ const MenuProductScreen = ({navigation,route}) => {
 
         switch(route.key){
             case 1: 
-                return <Route1 name = {navigation} />
+                return <Route1 navigation = {navigation} />
                 case 2: 
                 return <Route2 name = {navigation} /> 
                 case 3: 

@@ -1,4 +1,5 @@
 import React, {useState,useContext,useEffect} from 'react';
+import auth from '@react-native-firebase/auth';
 
 import {
   View,
@@ -7,7 +8,8 @@ import {
   Pressable,
   Alert,
   Switch,
-  StyleSheet
+  StyleSheet,
+  TouchableOpacity
  
 } from 'react-native';
 
@@ -26,8 +28,30 @@ import {
      } from 'react-native-elements'
 
 import {colors} from '../global/styles'
+import { SignInContext } from '../contexts/authContext';
 
-     export default function DrawerContent(props){
+
+export default function DrawerContent(props){
+
+    const {dispatchSignedIn} = useContext(SignInContext)
+
+async function signOut(){
+       
+    try{
+        auth()
+        .signOut()
+        .then(
+            ()=>{console.log("USER SUCCESSFULLY SIGNED OUT")
+            dispatchSignedIn({type:"UPDATE_SIGN_IN",payload:{userToken:null}})
+        })
+
+    }catch(errot){
+        Alert.alert(error.code)
+    }
+}
+
+
+
          return(
              <View style ={styles.container}>
                  <DrawerContentScrollView {...props}>
@@ -148,7 +172,7 @@ import {colors} from '../global/styles'
      
                 </DrawerContentScrollView>  
 
-
+                
                 <DrawerItem 
                     label = "Sign Out"
                     icon = {({color,size})=>(
@@ -157,9 +181,11 @@ import {colors} from '../global/styles'
                             name = "logout-variant"
                             color ={color}
                             size ={size}
+                            onPress ={()=>{signOut()}} 
                         />
                     )}
-                />   
+                />
+              
              </View>
          )
      }

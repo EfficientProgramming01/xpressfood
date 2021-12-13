@@ -1,7 +1,9 @@
-import React,{useState,useRef} from 'react';
+import React,{useState,useRef,useEffect,useContext} from 'react';
 
 import {View, Text, StyleSheet, Dimensions,Image,ScrollView} from 'react-native'
 import {colors, parameters,title} from "../../global/styles"
+import { SignInContext } from '../../contexts/authContext';
+import auth from '@react-native-firebase/auth';
 
 
 import Swiper from 'react-native-swiper'
@@ -9,6 +11,19 @@ import Swiper from 'react-native-swiper'
 import {Icon, Button,SocialIcon} from 'react-native-elements'
 
 export default function SignInWelcomeScreen({navigation}){
+  const {dispatchSignedIn} = useContext(SignInContext)
+
+useEffect(()=>{
+  auth().onAuthStateChanged((user)=>{
+    if(user){
+      dispatchSignedIn({type:"UPDATE_SIGN_IN",payload:{userToken:"signed-in"}})
+    }else{
+      dispatchSignedIn({type:"UPDATE_SIGN_IN",payload:{userToken:null}})
+    }
+  })
+  
+},[])
+
     return(
     <ScrollView contentContainerStyle = {{flexGrow: 1,justifyContent: 'space-between'}} >
     
